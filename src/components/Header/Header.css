@@ -1,0 +1,18 @@
+nav{
+    background-color: lightslategray;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    padding: 6px;
+}
+nav a:hover{
+    background-color:lightgrey;
+    color: black;
+}

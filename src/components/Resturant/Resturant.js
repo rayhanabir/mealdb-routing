@@ -32,6 +32,8 @@ const Resturant = () => {
                     ></Meal>)
                 }
             </div>
+
+            {/* responsive not added */}
            
         </div>
     );

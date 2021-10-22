@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import './MealDetails.css';
 const MealDetails = () => {
 
@@ -13,6 +13,11 @@ const MealDetails = () => {
         .then(data =>setMealDetails(data.meals[0]))
     },[]);
 
+    const history = useHistory()
+    const handleCheckout= () =>{
+        history.push('/checkout')
+    }
+
     const {strArea, strCategory, strMeal, strMealThumb, strInstructions, } = mealDetails;
     return (
         <div className="single-card">
@@ -22,7 +27,7 @@ const MealDetails = () => {
                <h5>Category:{strCategory}</h5>
                <p>Area: <small>{strArea}</small></p>
                <p>Instruction: {strInstructions?.slice(0,130)}</p>
-               <button className="meal-btn">Order</button>
+               <button className="meal-btn" onClick={handleCheckout}>Order</button>
            </div>
         </div>
     );

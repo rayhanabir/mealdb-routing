@@ -8,7 +8,11 @@ const Resturant = () => {
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`;
         fetch(url)
         .then(res=>res.json())
-        .then(data=>setMeals(data.meals))
+        .then(data=>{
+            if(data.meals!==null){
+                setMeals(data.meals)
+            }
+        })
     },[searchText])
 
     const handleSearch =(e) =>{

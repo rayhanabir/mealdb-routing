@@ -1,0 +1,22 @@
+.input-field{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    padding: 8px;
+}
+.input-field input{
+    width: 75%;
+    height: 25px;
+    border-radius: 3px;
+    border: none;
+}
+
+.meals-container{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    margin-top: 10px;
+}
